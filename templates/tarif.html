@@ -99,7 +99,7 @@
         <div class="card price-card h-100 p-4 text-center border border-2 border-danger">
           <span class="badge badge-popular mb-2">Populaire</span>
           <h5 class="fw-bold">Standard</h5>
-          <p class="text-muted">Pour les invitations en dessous de 100</p>
+          <!-- <p class="text-muted">Pour les invitations en dessous de 100</p> -->
           <div class="price">1.5 $ par invitation </div>
 
           <ul class="list-unstyled mt-4">
@@ -111,7 +111,7 @@
             <li>✅ Gestion complète des invités</li>
           </ul>
 
-          <a href="forms/getInTouchForm.html" class="btn btn-main mt-3">
+          <a href="{{url_for('contact')}}" class="btn btn-main mt-3">
             Choisir Standard
           </a>
         </div>
@@ -121,7 +121,7 @@
       <div class="col-md-4">
         <div class="card price-card h-100 p-4 text-center">
           <h5 class="fw-bold">Premium</h5>
-          <p class="text-muted">Pour les invitations au délà de 100</p>
+          <!-- <p class="text-muted">Pour les invitations au délà de 100</p> -->
           <div class="price">1$ par invitation</div>
 
           <ul class="list-unstyled mt-4">
@@ -130,10 +130,11 @@
             <li>✅ Support prioritaire</li>
             <li>✅ Tout le plan Standard</li>
             <li>✅ Statistiques avancées</li>
+            <li>✅ Suivis de position en temps réel</li>
             <li>✅ Téléchargement QR Codes</li>
           </ul>
 
-          <a href="forms/getInTouchForm.html" class="btn btn-main mt-3">
+          <a href="{{url_for('contact')}}" class="btn btn-main mt-3">
             Passer en Premium
           </a>
         </div>
@@ -171,7 +172,7 @@
         </h2>
         <div id="q2" class="accordion-collapse collapse">
           <div class="accordion-body">
-            Oui, un seul paiement par invitation.
+            Non, le paiement est fait par invitation.
           </div>
         </div>
       </div>
@@ -187,7 +188,7 @@
     <p class="mb-4">
       Commencez gratuitement ou choisissez l’offre qui vous convient.
     </p>
-    <a href="forms/getInTouchForm.html" class="btn btn-main btn-lg">
+    <a href="{{url_for('contact')}}" class="btn btn-main btn-lg">
       Passer la commande
     </a>
   </div>

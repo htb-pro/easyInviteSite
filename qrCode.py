@@ -14,7 +14,7 @@ def generateQrCode():
         border = 2
     )
     QR.add_data(url)
-    img = QR.make_image(fill_color="white", back_color = "black")
+    img = QR.make_image(fill_color="black", back_color = "pink")
     img.save(file_path)
 
 generateQrCode()

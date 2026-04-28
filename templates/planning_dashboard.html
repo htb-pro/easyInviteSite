@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Planning | EasyInvite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f4f7f6; }
+        .sidebar { background: #1a1a1a; min-height: 100vh; color: white; }
+        .nav-link { color: rgba(255,255,255,0.7); border-radius: 8px; margin: 5px 0; }
+        .nav-link:hover, .nav-link.active { background: #D4AF37; color: white; }
+        .card-checklist { border: none; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .progress { height: 10px; border-radius: 50px; background-color: #e9ecef; }
+        .progress-bar { background-color: #D4AF37; }
+        .task-item { border-left: 4px solid transparent; transition: 0.2s; cursor: pointer; }
+        .task-item:hover { background-color: #fdfaf0; }
+        .task-done { border-left-color: #28a745; background-color: #f8fff9; }
+        .task-pending { border-left-color: #ffc107; }
+        .category-badge { font-size: 0.75rem; padding: 4px 10px; border-radius: 50px; background: #eee; }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar px-3 py-4">
+            <h4 class="text-gold fw-bold mb-4" style="color: #D4AF37;">EASYINVITE</h4>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="#">🏠 Tableau de bord</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">📅 Ma Checklist</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">✉️ Invitations & QR</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">💰 Mon Budget</a></li>
+                <li class="nav-item mt-5"><a class="nav-link text-danger" href="#">🚪 Déconnexion</a></li>
+            </ul>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class="h2">Organisation du Mariage</h1>
+                <span class="badge bg-white text-dark border p-2">Date J-180 (Octobre 2026)</span>
+            </div>
+
+            <div class="card card-checklist p-4 mb-4">
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="fw-bold">Progression Globale</span>
+                    <span class="fw-bold text-gold" style="color: #D4AF37;">35%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 35%"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card card-checklist">
+                        <div class="card-header bg-white py-3 border-0">
+                            <h5 class="mb-0">Tâches prioritaires (Mois -6)</h5>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item d-flex align-items-center py-3 task-item task-done">
+                                <input class="form-check-input me-3" type="checkbox" checked>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0 text-decoration-line-through text-muted">Réserver la salle de réception</h6>
+                                    <span class="category-badge">Logistique</span>
+                                </div>
+                                <span class="text-muted small">Fait le 12/04</span>
+                            </div>
+                            <div class="list-group-item d-flex align-items-center py-3 task-item task-pending">
+                                <input class="form-check-input me-3" type="checkbox">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">Valider le menu avec le traiteur</h6>
+                                    <span class="category-badge">Restauration</span>
+                                </div>
+                                <span class="badge bg-warning text-dark small">Urgent</span>
+                            </div>
+                            <div class="list-group-item d-flex align-items-center py-3 task-item task-pending">
+                                <input class="form-check-input me-3" type="checkbox">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">Choisir le photographe et vidéaste</h6>
+                                    <span class="category-badge">Souvenirs</span>
+                                </div>
+                                <div class="avatar-group d-flex">
+                                    <small class="text-muted">Échéance : 15 Mai</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0 py-3">
+                            <button class="btn btn-outline-dark btn-sm rounded-pill">+ Ajouter une tâche personnalisée</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card card-checklist p-4 mb-3 bg-dark text-white">
+                        <h6>💡 Conseil d'EasyInvite</h6>
+                        <p class="small opacity-75">À Lubumbashi, les mois de juin à août sont très prisés. Si vous n'avez pas encore votre photographe, contactez nos partenaires VIP dès maintenant.</p>
+                        <button class="btn btn-gold btn-sm w-100" style="background: #D4AF37; color: white; border: none;">Voir les partenaires</button>
+                    </div>
+                    
+                    <div class="card card-checklist p-4 border-0">
+                        <h6>📊 Résumé Budget</h6>
+                        <div class="d-flex justify-content-between mt-3 small">
+                            <span>Dépensé :</span>
+                            <span class="fw-bold">1 200 $</span>
+                        </div>
+                        <div class="d-flex justify-content-between small">
+                            <span>Restant :</span>
+                            <span class="fw-bold text-success">3 800 $</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
